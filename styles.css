@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(#e4c0f5, #6b08bd);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+    margin-left: 77px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 2rem;
+    color: #ff4d6d;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+#yesButton, #no {
+    background-color: #06d6a0;
+    width: 100px;
+    font-size: 20px;
+    height: 40px;
+    color: #fff;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#no {
+    background-color: #ef476f;
+    position: static;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    #yesButton, #no {
+        width: 90px;
+        font-size: 18px;
+        height: 35px;
+    }
+}
